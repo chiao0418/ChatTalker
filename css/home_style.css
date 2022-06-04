@@ -170,6 +170,12 @@ sub {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .top {
+    right: 16px;
+    width: 50px;
+  }
+}
 .header-wrap {
   margin: 0 auto;
   position: relative;
