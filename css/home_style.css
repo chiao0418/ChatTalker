@@ -161,6 +161,13 @@ sub {
   padding-right: 16px;
 }
 
+.swiper-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 .top {
   position: fixed;
   bottom: 5vh;
@@ -610,31 +617,9 @@ h3 {
   }
 }
 
-.comment .comment-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 10% -8px 24px -8px;
-}
-@media (max-width: 768px) {
-  .comment .comment-list {
-    flex-wrap: wrap;
-    margin: 20% 0px 24px 0px;
-  }
-  .comment .comment-list li:not(:first-child) {
-    display: none;
-  }
-}
 .comment .comment-list li {
-  margin: 0px 8px;
-  width: 33.33%;
   padding: 48px 32px 24px 32px;
   position: relative;
-}
-@media (max-width: 768px) {
-  .comment .comment-list li {
-    margin: 0px 20px;
-    width: 100%;
-  }
 }
 .comment .comment-list li .user-panel {
   position: absolute;
@@ -673,19 +658,24 @@ h3 {
 .comment .comment-list li .grade .star {
   align-self: flex-end;
 }
-.comment .pagenation {
-  display: flex;
-  justify-content: center;
+.comment .swiper {
+  width: 100%;
+  padding: 60px 10px 0px 10px;
+  margin-top: 48px;
 }
-.comment .pagenation li {
-  margin: 0px 4px;
-  width: 10px;
-  height: 10px;
-  background: #DDDDDD;
-  border-radius: 50px;
+.comment .swiper .swiper-slide {
+  height: initial;
 }
-.comment .pagenation .active {
+.comment .swiper .swiper-wrapper {
+  margin: 0px;
+}
+.comment .swiper .swiper-pagination {
+  position: static;
+  margin-top: 24px;
+}
+.comment .swiper .swiper-pagination-bullet-active {
   width: 16px;
+  border-radius: 8px;
   background: #FFD153;
 }
 

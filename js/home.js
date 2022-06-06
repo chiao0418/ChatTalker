@@ -13,11 +13,27 @@ $(function() {
         $('body,html').animate({scrollTop:0}, 200);
     });
 
-    // page-switch
-    $('.pagenation li').click(function(e){
-        e.preventDefault();
-        $(this).siblings('li').removeClass('active');
-        $(this).addClass('active');
-    })
+
+    // swiper
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        // loop: true,
+        slidesPerView: 1,
+        breakpoints:{
+            768:{
+                slidesPerView: 3
+            },
+            0:{
+                slidesPerView: 1
+            }
+        },
+        spaceBetween: 16,
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+      });
     
 });

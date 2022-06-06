@@ -193,7 +193,7 @@ sub {
 @media (max-width: 768px) {
   .header-bg {
     top: 30%;
-    height: 100vh;
+    height: 170%;
     border-radius: 0px 0px 0px 100px;
   }
 }

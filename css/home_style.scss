@@ -169,6 +169,13 @@ sub {
     padding-right: 16px;
 }
 
+.swiper-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 
 .top{
     position: fixed;
@@ -625,23 +632,7 @@ h3{
 
 .comment{
     .comment-list{
-        display: flex;
-        justify-content: space-between;
-        margin: 10% -8px 24px -8px;
-        @media(max-width: $sm-width){
-            flex-wrap: wrap;
-            margin: 20% 0px 24px 0px;
-            li:not(:first-child){
-                display: none;
-            }
-        }
         li{
-            margin: 0px 8px;
-            width: 33.33%;
-            @media(max-width: $sm-width){
-                margin: 0px 20px;
-                width: 100%;
-            }
             padding: 48px 32px 24px 32px;
             position: relative;
             .user-panel{
@@ -684,19 +675,25 @@ h3{
         }
     }
 
-    .pagenation{
-        display: flex;
-        // outline: 1px black solid;
-        justify-content: center;
-        li {
-            margin: 0px 4px;
-            width: 10px;
-            height: 10px;
-            background: #DDDDDD;
-            border-radius: 50px;
+    .swiper {
+        width: 100%;
+        padding: 60px 10px 0px 10px;
+        margin-top: 48px;
+        // outline: 2px red solid;
+        .swiper-slide{
+            height: initial;
         }
-        .active{
+        .swiper-wrapper{
+            margin: 0px;
+            // outline: 2px blue solid;
+        }
+        .swiper-pagination {
+            position: static;
+            margin-top: 24px;
+        }
+        .swiper-pagination-bullet-active{
             width: 16px;
+            border-radius: 8px;
             background: #FFD153;
         }
     }
@@ -731,6 +728,8 @@ h3{
         background: #F5F5F5;
     }
 }
+
+
 
 
 
